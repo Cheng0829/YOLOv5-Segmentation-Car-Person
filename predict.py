@@ -5,9 +5,6 @@ from detect import detect
 
 if __name__ == "__main__":
 
-    if (a==1):
-        print('o')
-
     capture = cv2.VideoCapture(0)
     i = 0
     print("请选择功能模式:\n1.图片检测\n2.视频检测\n3.摄像头实时监测")
