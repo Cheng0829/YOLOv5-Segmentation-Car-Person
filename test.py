@@ -1,3 +1,6 @@
+
+# python test.py --data data/cityscapes_det.yaml --segdata ./data/citys --weights weights/pspv5m.pt --img-size 1024 --base-size 1024
+
 import argparse
 import json
 import os
