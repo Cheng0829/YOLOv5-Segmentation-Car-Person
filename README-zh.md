@@ -1,4 +1,4 @@
-# 多功能检测与分割系统。
+# 多功能检测与分割系统
  
 [Introduction to English Version](https://github.com/Cheng0829/yolov5-segmentation-car-person/blob/master/README.md)
 
