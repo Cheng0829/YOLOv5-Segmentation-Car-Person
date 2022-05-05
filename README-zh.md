@@ -68,7 +68,7 @@
 `python test.py--data data/Cityscapes_Det.yaml--Segdata./data/citys--Weights/pspv5m.pt--img-size1024--base-size1024`。
 来测试你的模型。
 
-### Detect.py
+### detect.py
 
 如果你只想直接使用我的项目，这个文件对你来说可能是最重要的。
 在文件中，您可以选择三种模式：①图像检测、②视频检测 和 ③摄像头实时检测。
