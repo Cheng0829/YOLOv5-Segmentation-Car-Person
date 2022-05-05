@@ -1,6 +1,7 @@
 # Multi-Function Detection and Segmentation System
 
-[中文版介绍]()
+[中文版介绍](https://github.com/Cheng0829/yolov5-segmentation-car-person/blob/master/README-zh.md)
+
 
 ## Overview
 
