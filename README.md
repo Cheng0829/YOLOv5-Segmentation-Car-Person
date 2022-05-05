@@ -96,3 +96,10 @@ The python file is to call detect.py .
 
 **Other Folders or Files are from ultralytics/YOLOv5 and basically don't matter.** 
 
+### requirements.txt
+You can use `pip install -r requirements.txt` to install all needed packages. And if you use the Windows System, you should replace 'pycocotools' to 'pycocotools-windows' in the txt file.
+
+Certainly, I guess that you'll encounter some errors when installing them. I advise you to use conda to create a new python virtual environment.
+When you have installed Anaconda, you can start "Anaconda powershell prompt" .
+The code creating virtual environment is `conda create -n your_env_name python=x.x`
+and you can use `conda install -n your_env_name package_name` to install other packages.

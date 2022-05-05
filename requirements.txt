@@ -26,5 +26,5 @@ pandas
 
 # extras --------------------------------------
 thop  # FLOPS computation
-#原版是pycocotools>=2.0  # COCO mAP
-pycocotools-windows>=2.0  # COCO mAP
+pycocotools>=2.0  # COCO mAP
+#如果是windows系统需要把上一行改成 pycocotools-windows>=2.0  # COCO mAP
