@@ -72,9 +72,10 @@ class PyramidPooling(nn.Module):  # 语义分割:PSPNet: Pyramid Scene Parsing N
         self.pool2 = nn.AdaptiveAvgPool2d(k[1])
         self.pool3 = nn.AdaptiveAvgPool2d(k[2])
         self.pool4 = nn.AdaptiveAvgPool2d(k[3])
+        #直接按照论文模型进行编写,比较简单
         # AdaptiveAvgPool2d（二元自适应均值池化层）
         # 二元: 二维矩阵
-
+        #
         out_channels = in_channels // 4  # 整除,256/4=64
         self.conv1 = Conv(in_channels, out_channels, k=1)
         self.conv2 = Conv(in_channels, out_channels, k=1)
