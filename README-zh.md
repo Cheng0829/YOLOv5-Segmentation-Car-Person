@@ -34,7 +34,7 @@
 
 此文件夹包含检测、测试或训练项目的结果。
 
-### ./demo_Image
+### ./demo_image
 
 此文件夹包含一些演示图像。
 
@@ -78,7 +78,7 @@
 该python文件将调用detect.py进行检测
 **其他文件夹或文件来自ultralytics/YOLOv5，基本上无关紧要。**。
 
-### requirements s.txt
+### requirements.txt
 
 您可以使用`pip install -r requirements s.txt`安装所有需要的包。
 如果你使用的是Windows系统，你应该把txt文件中的‘pycotools’替换为‘pycoTools-windows’。
