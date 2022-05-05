@@ -1,10 +1,10 @@
-# 多功能检测与分割系统。
+# 多功能检测与分割系统
  
 [Introduction to English Version](https://github.com/Cheng0829/yolov5-segmentation-car-person/blob/master/README.md)
 
 ## 概述
 
-**这是我的本科毕业设计。**
+**这是我的本科毕业设计**
 
 它的主要功能是通过YOLOv5进行目标检测，并使用PSPNet进行语义分割。
 本项目YOLOv5部分代码基于 *[ultralytics YOLO V5 tag v5.0](https://github.com/ultralytics/yolov5)* 。
@@ -61,19 +61,19 @@
 当然，如果显卡的性能不是很高，您可以尝试降低workers运算单元的数量和batch-size的大小。
 当然，我建议你直接使用我的预训练模型，或者如果你不缺钱的话，可以去找一些云GPU平台(事实上，我已经去过一个叫AutoDL的网站很多次了)。
 
-### test.py。
+### test.py
 
 通过一些著名的指标，如准确率、召回率、F1等来测试您的模型的性能。
 您可以使用cmd代码。
 `python test.py--data data/Cityscapes_Det.yaml--Segdata./data/citys--Weights/pspv5m.pt--img-size1024--base-size1024`。
 来测试你的模型。
 
-### Detect.py。
+### Detect.py
 
 如果你只想直接使用我的项目，这个文件对你来说可能是最重要的。
 在文件中，您可以选择三种模式：①图像检测、②视频检测 和 ③摄像头实时检测。
 
-### predict.py。
+### predict.py
 
 该python文件将调用detect.py进行检测
 **其他文件夹或文件来自ultralytics/YOLOv5，基本上无关紧要。**。
