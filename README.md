@@ -1,4 +1,4 @@
-# Multi-Function Detection and Segmentation System
+# Multi-Function Detection and Segmentation System Based on YOLO
 
 [中文版介绍](https://github.com/Cheng0829/yolov5-segmentation-car-person/blob/master/README-zh.md)
 
