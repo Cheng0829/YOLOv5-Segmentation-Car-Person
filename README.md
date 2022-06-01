@@ -2,7 +2,6 @@
 
 [中文版介绍](https://github.com/Cheng0829/yolov5-segmentation-car-person/blob/master/README-zh.md)
 
-
 ## Overview
 
 **This project is my undergraduate graduation project.**
@@ -26,9 +25,9 @@ rest of the time combining this module with YOLO.
 
 ### The three images are a group of classic processing result.
 
-![](demo_image/38.png)
-![](demo_image/39.png)
-![](demo_image/40.png)
+![ ](demo_image/38.png)
+![ ](demo_image/39.png)
+![ ](demo_image/40.png)
 
 ## Files&Folders
 
@@ -78,6 +77,8 @@ to train your own model. Certainly, if the performance of your graphics card isn
 number of workers and batch-size. Certainly, I advise you to directly use my pre-training models or go to some could GPU
 platforms if you're not short of money. (In the truth, I have been to a website named autoDL many times. )
 
+> **Tips:** Modify the model structure of YOLOv5, add the PSPNet module, and then use yolov5s.pt as a pre-training model for training. Since the model is modified, a new weight file named pspv5s.pt will be generated. Because the function of fine-tuning the model is based on the pre-training model, the next training and the final detection in predict.py and detect.py will no longer require yolov5s.pt.
+
 ### test.py
 
 The python file is to test the performance of your model by some famous indicators such as Prediction,Recall,F1 and so
@@ -98,6 +99,7 @@ The python file is to call detect.py .
 **Other Folders or Files are from ultralytics/YOLOv5 and basically don't matter.** 
 
 ### requirements.txt
+
 You can use `pip install -r requirements.txt` to install all needed packages. And if you use the Windows System, you should replace 'pycocotools' to 'pycocotools-windows' in the txt file.
 
 Certainly, I guess that you'll encounter some errors when installing them. I advise you to use conda to create a new python virtual environment.
