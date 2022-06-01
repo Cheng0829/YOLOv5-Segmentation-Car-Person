@@ -1,27 +1,24 @@
-# 多功能检测与分割系统
- 
+# YOLO算法改进及在车辆检测领域的应用
+
 [Introduction to English Version](https://github.com/Cheng0829/yolov5-segmentation-car-person/blob/master/README.md)
 
 ## 概述
- 
-**这是我的本科毕业设计**
 
+**这是我的本科毕业设计**
 它的主要功能是通过YOLOv5进行目标检测，并使用PSPNet进行语义分割。
 本项目YOLOv5部分代码基于 *[ultralytics YOLO V5 tag v5.0](https://github.com/ultralytics/yolov5)* 。
 相应地，我也使用了ultralytics/YOLOv5的预训练模型。
 我通常使用两个最简单的预训练模型--yolov5s.pt和yolov5s.pt。你可以在./weights中直接看到它们。
-在语义分割部分，我使用了PSPNet（全称为 *[Pyramid Scene Parsing Network](https://arxiv.org/abs/1612.01105)*
-，即金字塔场景解析网络，此网络模型于2017年在CVPR上提出。
-在我看来，这是性能和简洁性之间平衡得最好的网络之一。
+在语义分割部分，我使用了PSPNet（全称为 *[Pyramid Scene Parsing Network](https://arxiv.org/abs/1612.01105)*，即金字塔场景解析网络，此网络模型于2017年在CVPR上提出。在我看来，这是性能和简洁性之间平衡得最好的网络之一。
 事实上，在我拿到YOLOv5源代码后，我只花了一点时间就完成主要部分，而我花了大部分剩余时间将此模块与YOLO结合使用。
 
 ## 演示
 
 ### 典型的一组处理结果
 
-![](demo_image/38.png)
-![](demo_image/39.png)
-![](demo_image/40.png)
+![ ](demo_image/38.png)
+![ ](demo_image/39.png)
+![ ](demo_image/40.png)
 
 ## 文件和文件夹
 
@@ -55,17 +52,18 @@
 该python文件与ultralytics/YOLOv5中的train.py文件大致相同。当我研究YOLO算法的时候，我对其做了一些更改。
 它看起来有很大变化，但主体结构没有改变。
 您可以使用cmd代码
-`python Train.py--data ciyscapes_de.yaml--cfg yolov5s_City_Seg.yaml--批量大小18--纪元200--权重。/yolov5s.pt--工人8--标签平滑0.1--img-大小832--非自动锚定`
-。
+`python train.py --data cityscapes_det.yaml --cfg yolov5s_city_seg.yaml --batch-size 18 --epochs 200 --weights ./yolov5s.pt --workers 8 --label-smoothing 0.1 --img-size 832 --noautoanchor`
 训练你自己的模型
 当然，如果显卡的性能不是很高，您可以尝试降低workers运算单元的数量和batch-size的大小。
 当然，我建议你直接使用我的预训练模型，或者如果你不缺钱的话，可以去找一些云GPU平台(事实上，我已经去过一个叫AutoDL的网站很多次了)。
 
+> **Tips:** 修改YOLOv5的模型结构,加上PSPNet模块,然后用yolov5s.pt作为预训练模型进行训练,由于修改了模型,所以会生成新的权重文件pspv5s.pt,由于微调模型的功能是建立在预训练模型基础上的,所以接下来的训练和最后在predict.py和detect.py种进行检测也就都不再需要yolov5s.pt了.
+
 ### test.py
 
 通过一些著名的指标，如准确率、召回率、F1等来测试您的模型的性能。
-您可以使用cmd代码。
-`python test.py--data data/Cityscapes_Det.yaml--Segdata./data/citys--Weights/pspv5m.pt--img-size1024--base-size1024`。
+您可以使用cmd代码
+`python test.py--data data/Cityscapes_Det.yaml--Segdata./data/citys--Weights/pspv5m.pt--img-size1024--base-size1024`
 来测试你的模型。
 
 ### detect.py
