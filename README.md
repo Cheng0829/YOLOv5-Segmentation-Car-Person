@@ -1,3 +1,5 @@
+
+
 # Multi-Function Detection and Segmentation System Based on YOLO
 
 [中文版介绍](https://github.com/Cheng0829/yolov5-segmentation-car-person/blob/master/README-zh.md)
@@ -71,7 +73,7 @@ The python file is roughly the same as the train.py in ultralytics/YOLOv5. I mad
 when I studied it. It looks very different, but the main structure has not changed.
 You can use the cmd code
 
-`python train.py --data cityscapes_det.yaml --cfg yolov5s_city_seg.yaml --batch-size 18 --epochs 200 --weights ./yolov5s.pt --workers 8 --label-smoothing 0.1 --img-size 832 --noautoanchor`
+`python train.py --data data/cityscapes_det.yaml --cfg models/yolov5s_city_seg.yaml --batch-size 18 --epochs 200 --weights ./yolov5s.pt --workers 8 --label-smoothing 0.1 --img-size 832 --noautoanchor`
 
 to train your own model. Certainly, if the performance of your graphics card isn't very high, you can try to reduce the
 number of workers and batch-size. Certainly, I advise you to directly use my pre-training models or go to some could GPU
